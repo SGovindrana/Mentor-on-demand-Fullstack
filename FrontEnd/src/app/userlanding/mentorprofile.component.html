@@ -1,0 +1,198 @@
+<html>
+  
+    
+    <style>
+   
+.emp-profile{
+    padding: 3%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    border-radius: 0.5rem;
+    background: white;
+}
+.profile-img{
+    text-align: center;
+}
+.profile-img img{
+    width: 70%;
+    height: 100%;
+}
+.profile-img .file {
+    position: relative;
+    overflow: hidden;
+    margin-top: -20%;
+    width: 70%;
+    border: none;
+    border-radius: 0;
+    font-size: 15px;
+    
+}
+.profile-img .file input {
+    position: absolute;
+    opacity: 0;
+    right: 0;
+    top: 0;
+}
+.profile-head h5{
+      color: white;
+      font-family: "Comic Sans MS";
+}
+.profile-head h6{
+  color: white;
+      font-family: "Comic Sans MS";
+}
+.profile-edit-btn{
+    border: none;
+    border-radius: 1.5rem;
+    width: 70%;
+    padding: 2%;
+    font-weight: 600;
+    color: white;
+      font-family: "Comic Sans MS";
+    cursor: pointer;
+}
+.proile-rating{
+    font-size: 12px;
+    color: white;
+      font-family: "Comic Sans MS";
+    margin-top: 5%;
+}
+.proile-rating span{
+  color: white;
+      font-family: "Comic Sans MS";
+    font-size: 15px;
+    font-weight: 600;
+}
+.profile-head .nav-tabs{
+    margin-bottom:5%;
+}
+.profile-head .nav-tabs .nav-link{
+    font-weight:600;
+    border: none;
+}
+
+.profile-work{
+    padding: 14%;
+    margin-top: -15%;
+    
+}
+.profile-work p{
+    font-size: 12px;
+    color:lightskyblue;
+    font-family: "Comic Sans MS";
+    font-weight: 600;
+    margin-top: 10%;
+}
+.profile-work a{
+    text-decoration: none;
+    color: white;
+    font-family: "Comic Sans MS";
+    font-weight: 600;
+    font-size: 14px;
+}
+#s{
+  background-image:url("/assets/b.jpg")
+
+}
+#w{
+  color: lightskyblue;
+    font-family: "Comic Sans MS";
+}
+#o{
+  color:black;
+  font-family: "Comic Sans MS";
+  text-align: right;
+}
+
+
+</style><body>
+ <div class="container emp-profile">
+  <form id="s" method="post"> 
+   
+      <div class="row">
+          <div class="col-md-4">
+              <div class="profile-img">
+                  <img src="http://www.mustdo2019.com/wp-content/uploads/2019/03/user_logo.png" alt=""/>
+              
+              </div>
+          </div>
+          <div class="col-md-6">
+              <div class="profile-head">  
+                <h4 id="o" align="right" routerLink="/userlanding" >Back</h4>
+                          <h5 id="z">
+                              Akshay Sharma
+                          </h5>
+                          <h6>
+                              Web Developer and Designer
+                          </h6>
+                          <p class="proile-rating">RANKINGS : <span>8/10</span></p>
+                  <ul class="nav nav-tabs" id="myTab" role="tablist">
+                      <li class="nav-item">
+                          <a class="nav-link active" id="home-tab" data-toggle="tab"  >About</a>
+                      </li>
+                      
+                  </ul>
+              </div>
+          </div>
+          <div class="col-md-2">
+             
+          </div>
+      </div>
+      <div class="row">
+          <div  class="col-md-4">
+              <div class="profile-work">
+                  <p>WORK LINK</p>
+                  <a >Website Link</a><br/>
+           
+                  <a >Linkedin Profile</a>
+                  <p>SKILLS</p>
+                  <a >Web Designer</a><br/>
+                  <a>Web Developer</a><br/>
+                  <a >WordPress</a><br/>
+                  <a>WooCommerce</a><br/>
+                  <a>PHP, .Net</a><br/>
+              </div>
+          </div>
+          <div id="w" class="col-md-8">
+              <div class="tab-content profile-tab" id="myTabContent">
+                  <div  class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                              <div  class="row">
+                                  <div class="col-md-6">
+                                      <label id="id">User Id</label>
+                                      
+                                  </div>
+                                 
+                              </div>
+                              
+                              <div class="row">
+                                  <div class="col-md-6">
+                                      <label id="e" >Email</label>
+                                  </div>
+                                 
+                              </div>
+                              <div class="row">
+                                  <div class="col-md-6">
+                                      <label id="m">Phone</label>
+                                  </div>
+                                 
+                              </div>
+                              <div class="row">
+                                  <div class="col-md-6">
+                                      <label id="r">Role</label>
+                                  </div>
+                                  
+                              </div>
+                              <div class="row">
+                                  <div class="col-md-6">
+                                      <label id="ex">Year Of Experience</label>
+                                  </div>
+                                  
+                              </div>
+                  </div>
+              </div>
+          </div>
+      </div> 
+  </form>           
+</div>
+</body>
+</html>

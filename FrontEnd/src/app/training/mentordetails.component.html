@@ -1,0 +1,198 @@
+<html>
+  <body>
+    <style>
+      body{
+        background-image: url("/assets/b.jpg");
+      }
+      </style>
+     
+
+
+<div class=" text-center">    
+    <br>
+    <h1 align = "center">Welcome to Mentor-on-Demand</h1>
+    <br>
+    <h2> Training Details</h2>
+    <br>
+    <div class = "container" style="overflow-x: auto;">
+    <table class="table" >
+      <thead>
+        <tr>
+          <th >Id</th> 
+          <th>progress</th>
+          <th>commissionAmount</th>
+          <th>rating</th>
+          <th>startDate</th>
+          <th>endDate</th>
+          <th>startTime</th>
+          <th>endTime</th>
+          <th>amountReceived</th>
+          <th>mentorId</th>
+          <th>AmountToMentor</th>
+          <th>User Name</th>
+          <th>Skill Name</th>
+          <th>Tech. Name</th>
+          <th>fees</th>
+          <th>status</th>
+          <th>Action</th>
+    
+           
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let training of training">
+              <td >{{training.id}}</td>
+              <td>{{training.progress}}</td>
+              <td>{{training.commissionAmount}}</td>
+              <td>{{training.rating}}</td>
+              <td>{{training.startDate}}</td>
+              <td>{{training.endDate}}</td>
+              <td>{{training.startTime}}</td>
+              <td>{{training.endTime}}</td>
+              <td>{{training.amountReceived}}</td>
+              <td><button class="btn btn-default" routerLink="/mentordetails">Mentor Details</button></td>
+              <td>{{training.amountToMentor}}</td>
+              <td><span *ngFor="let user of training.users">{{user.firstName}}</span></td>
+              <td><span *ngFor="let skill of training.skills">{{skill.name}}</span></td>
+              <td>{{training.technology.techName}}</td>
+              <td>{{training.fees}}</td>
+              <td>{{training.status}}</td>
+              <td><button class="btn btn-danger" (click)="deleteUser(user)"> Delete User</button></td>
+              
+              
+                  </tr>
+            </tbody>
+    </table></div>
+    <br>
+    <div class = "container" style="overflow-x: auto;">
+      <h2>User Details</h2><br>
+    <table class="table ">  
+      <tbody *ngFor="let training of training">
+          <tr >
+            
+                <th>Id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Username</th>
+                <th>Password</th>
+                <th>Email</th>
+                <th>Contact Number</th>
+                <th>Regestration Code</th>
+                <th>Role</th>
+                <th>LinkedIn URL</th>
+                <th>Years of Experience</th>
+                <th>Action</th>
+              <!--<th>Active</th>
+                <th>Confirmed SignUp</th>
+                <th>Reset Password</th>
+                <th>Reset Password Date</th>
+                <th>Action</th>--> 
+              </tr>
+              <tr *ngFor="let user of training.users">
+                <td>{{user.id}}</td>
+                <td>{{user.firstName}}</td>
+                <td>{{user.lastName}}</td>
+                <td>{{user.userName}}</td>
+                <td>{{user.password}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.contactNumber}}</td>
+                <td>{{user.regCode}}</td>
+                <td>{{user.role}}</td>
+                <td>{{user.linkedinUrl}}</td>
+                <td>{{user.yearsofExperience}}</td>
+              <!--td>{{user.active}}</td>
+                <td>{{user.confirmedSignup}}</td>
+                <td>{{user.resetPassword}}</td>
+                <td>{{user.resetPasswordDate}}</td> -->  
+                <td><button class="btn btn-danger" (click)="deleteUser(user)"> Delete User</button></td>
+             
+          </tr>
+      </tbody>
+    </table></div>
+    <br>
+    <div class = "container" style="overflow-x: auto;">
+    <h2>Payment Details</h2>
+    <table class="table ">
+        <tbody *ngFor="let training of training">
+              <tr>
+                <th class="hidden">Id</th>
+                <th>Transaction Type</th>
+                <th>Amount</th>
+                <th>Remarks</th>
+                <th>Mentor Id</th>
+                <th>Training Id</th>
+                <th>PaymentType</th>
+                <th>Action</th>
+              </tr>
+              <tr *ngFor="let payment of training.payment">
+                <td class="hidden">{{payment.id}}</td>
+                <td>{{payment.txnType}}</td>
+                <td>{{payment.amount}}</td>
+                <td>{{payment.remarks}}</td>
+                <td>{{payment.mentorId}}</td>
+                <td>{{payment.trainingId}}</td>
+                <td>{{payment.paymentType}}</td>
+                <td><button class="btn btn-danger" (click)="deletePayment(payment)"> Delete Payment</button></td>
+              
+          </tr>
+    </tbody>
+  </table>
+    </div>
+    <br>
+    <h2>Mentor Details</h2>
+    <div class = "container" style="overflow-x: auto;">
+      <table class="table ">
+          <thead>
+              <tr >
+                <th>Id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Username</th>
+                <th>Password</th>
+                <th>Email</th>
+                <th>Contact Number</th>
+                <th>Reg. Code</th>
+                <th>Role</th>
+                <th>LinkedIn URL</th>
+                <th>Years of Experience</th>
+               <!-- <th>Active</th>
+                <th>Confirmed SignUp</th>
+                <th>Reset Password</th>
+                <th>Reset Password Date</th>
+                <th>rating</th>-->
+                <th>timeZone</th>
+                <th>mentorProfile</th> 
+
+                <th>Action </th>
+              </thead>
+              <tbody >
+              <tr *ngFor="let training of training">
+                <td>{{training.mentor.id}}</td>
+                <td>{{training.mentor.firstName}}</td>
+                <td>{{training.mentor.lastName}}</td>
+                <td>{{training.mentor.userName}}</td>
+                <td>{{training.mentor.password}}</td>
+                <td>{{training.mentor.email}}</td>
+                <td>{{training.mentor.contactNumber}}</td>
+                <td>{{training.mentor.regCode}}</td>
+                <td>{{training.mentor.role}}</td>
+                <td>{{training.mentor.linkedinUrl}}</td>
+                <td>{{training.mentor.yearsofExperience}}</td>
+           <!--     <td>{{training.mentor.active}}</td>
+                <td>{{training.mentor.confirmedSignup}}</td>
+                <td>{{training.mentor.resetPassword}}</td>
+                <td>{{training.mentor.resetPasswordDate}}</td>  
+                <td>{{training.mentor.rating}}</td>-->
+                <td>{{training.mentor.timeZone}}</td>
+                <td>{{training.mentor.mentorProfile}}</td>
+                <td><button class="btn btn-danger" (click)="deleteMentor(mentor)"> Delete Mentor</button></td>
+              </tr>
+              </tbody>
+      </table></div>
+    <br>
+    <br>
+    <hr>
+    
+    </div>
+    </body>
+    </html>

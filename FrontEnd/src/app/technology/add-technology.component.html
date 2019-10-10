@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <style>
+    #login{
+      width: 500px;
+      border-radius: 5px;
+      background-color: #92a8d1;
+      opacity: 0.8;
+      padding: 50px; 
+      color: white;
+    }
+    body{
+     background-image: url("/assets/b.jpg");
+
+    }
+    </style>
+  </head>
+
+  <body>
+<div id="login" class="container text-center">
+  <h2 class="text-center">Add Technology</h2>
+  <br>
+<form>
+  <div class="form-group">
+    <label for="techName">Technology Name:</label>
+    <input type="text" [(ngModel)]="technology.techName" placeholder="Tech Name" name="techName" class="form-control" id="techName">
+  </div>
+
+  <div class="form-group">
+    <label for="description">Description</label>
+    <input [(ngModel)]="technology.description" placeholder="Description" name="description" class="form-control" id="description">
+  </div>
+
+  <div class="form-group">
+    <label for="createdAt">Created Date:</label>
+    <input type ="datetime" [(ngModel)]="technology.createdAt" placeholder="createdAt" name="createdAt" class="form-control" id="createdAt">
+  </div>
+
+  <div class="form-group">
+    <label for="updatedAt">Updated Date</label>
+    <input  type="datetime" [(ngModel)]="technology.updatedAt" placeholder="updatedDate" name="updatedAt" class="form-control" id="updatedAt">
+  </div>
+
+  <button class="btn btn-success" (click)="createTechnology()">Create</button>
+  <br><br><br>
+</form>
+</div>
+</body>
+</html>

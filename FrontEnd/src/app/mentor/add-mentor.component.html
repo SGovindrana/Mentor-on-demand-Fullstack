@@ -1,0 +1,98 @@
+<html>
+  <head>
+    <style>
+    #login{
+      width: 500px;
+      border-radius: 5px;
+      background-color: #92a8d1;
+      opacity: 0.8;
+      padding: 50px;
+    }
+    h2{
+      color:white;
+    }
+    body{
+      background-image: url("/assets/b.jpg"); 
+     
+      background-size: cover;
+      background-size: 300%;
+      
+       }
+       n{
+         color: white;
+       }
+    
+    </style>
+  </head>
+
+  <body>
+    
+<div id="login" class="container text-center">
+  <h2 class="text-center">Add mentor</h2>
+  <br>
+<form >
+  <div id="n" class="form-group">
+    <label for="email">Email address:</label>
+    <input type="email" [(ngModel)]="mentor.email" placeholder="Email" name="email" class="form-control" id="email">
+  </div>
+
+  <div class="form-group">
+    <label for="firstName">First Name:</label>
+    <input [(ngModel)]="mentor.firstName" placeholder="First Name" name="firstName" class="form-control" id="firstName">
+  </div>
+
+  <div class="form-group">
+    <label for="lastName">Last Name:</label>
+    <input [(ngModel)]="mentor.lastName" placeholder="Last name" name="lastName" class="form-control" id="lastName">
+  </div>
+
+  <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" [(ngModel)]="mentor.password" placeholder="password" name="password" class="form-control" id="password">
+  </div>
+
+  <div class="form-group">
+      <label for="contactNumber">Contact No:</label>
+      <input type="tel" [(ngModel)]="mentor.contactNumber" placeholder="Contact Number" name="contactNumber" class="form-control" id="contactNumber">
+  </div>
+
+  <div class="form-group">
+      <label for="regCode">Reg. Code</label>
+      <input type="text" [(ngModel)]="mentor.regCode" placeholder="Registration Code" name="regCode" class="form-control" id="regCode">
+  </div>
+
+  <div class="form-group">
+      <label for="role">Role</label>
+      <input type="text" [(ngModel)]="mentor.role" placeholder="Role " name="role" class="form-control" id="role">
+  </div>
+
+  <div class="form-group">
+      <label for="linkedinUrl">LinkedIn Url</label>
+      <input type="text" [(ngModel)]="mentor.linkedinUrl" placeholder="linkedinUrl " name="linkedinUrl" class="form-control" id="linkedinUrl">
+  </div>
+
+  <div class="form-group">
+      <label for="yearsofExperience">Years of Experience</label>
+      <input type="text" [(ngModel)]="mentor.yearsofExperience" placeholder="0,1,2 etc. " name="yearsofExperience" class="form-control" id="yearsofExperience">
+  </div>
+
+  <div class="form-group">
+    <label for="rating">Rating:</label>
+    <input type="text" [(ngModel)]="mentor.firstName" placeholder="Rating" name="rating" class="form-control" id="rating">
+  </div>
+
+  <div class="form-group">
+    <label for="timeZone">Time Zone:</label>
+    <input type="text" [(ngModel)]="mentor.timeZone" placeholder="Time Zone" name="timeZone" class="form-control" id="timeZone">
+  </div>
+
+  <div class="form-group">
+    <label for="mentorProfile">Mentor Profile:</label>
+    <input type="text" [(ngModel)]="mentor.mentorProfile" placeholder="Mentor Profile" name="mentorProfile" class="form-control" id="mentorProfile">
+  </div>
+  <button class="btn btn-success" (click)="createMentor()">Create</button>
+</form>
+</div>
+</body>
+
+</html>

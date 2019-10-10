@@ -1,0 +1,93 @@
+<html>
+    <head>
+
+    </head>
+    <style>
+    body{
+        background-image:url("/assets/b.jpg")
+    }
+    </style>
+
+<body>
+<h4 align="center" class="modal-title">Admin Payment Details</h4>
+     
+         <div class="modal-body">
+          <table class="table table-hover table-bordered">
+              <thead>
+                  <tr class="info">
+                    <th class="hidden">Training Id</th>
+                    <th>Payment Id</th>
+                    <th>Technology Name</th>
+                    <th>Mentor Name</th>
+                    <th>User Id</th>
+                    <th>Amount Paid By User</th>
+                    <th>Remarks</th>
+                    <th>Transaction Type</th>
+                    <th>Total Amount To Mentor</th>
+                    <th></th>
+                   
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr *ngFor="let user of payment"  class="active">
+                      <td>{{user.trainingId}}</td>
+                      <td>{{user.trainingId}}</td>
+                    <td>{{user.techName}}</td>
+                    <td>{{user.mentorName}}</td>
+                    <td>{{user.userId}}</td>
+                    <td>{{user.amount}}</td>
+                    <td>{{user.remarks}}</td>
+                    <td>{{user.txnType}}</td>
+                    <td>{{user.totalAmountToMentor}}</td>
+                    <td><button class="btn btn-info btn-lg" (click)="getTrainings(user.trainingId,user.amount,user.id)" > View</button></td>
+                    
+                  
+                  </tr>
+                  </tbody>
+</table><br>
+
+<div *ngIf="showId">
+<div class="modal-body">
+    <table class="table table-hover table-bordered" style="width: 60%; margin-left: 19%;">
+        <tr>
+            <th>Training Id :</th>
+            <th>Progress :</th>
+            <th>Commission % :</th>
+           </tr>
+
+           <tr>
+           
+            <td>{{training.id}}</td>
+            <td>
+                <circle-progress
+                [percent]="training.progress"
+                [radius]="30"
+                [outerStrokeWidth]="10"
+                [innerStrokeWidth]="4"
+                [outerStrokeColor]="'#78C000'"
+                [innerStrokeColor]="'#C7E596'"
+                [animation]="true"
+                [animationDuration]="300"
+              ></circle-progress>
+            </td>
+            <td>{{training.commissionPercent}}</td>
+           </tr>
+           
+       </table>
+       <button class="btn btn-info btn-lg" (click)="setAmount(training.progress,training.commissionPercent)"  style="width: 20%; margin-left: 19%;"> Send Money</button>
+      
+       <button class="btn btn-info btn-lg"  (click)="toggleId()"  style="width: 20%; margin-left: 19%;"> Edit Payment % Commission</button>
+     <br><br>
+
+
+      <div *ngIf="displayId">
+          <input type="text" class="form-group" style="width: 20%; margin-left: 58%;"(ngValue)=training.commissionPercent placeholder="Enter Commission" for="commission" id="commission" [(ngModel)]="commission">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <button type="button" class="btn btn-success"  style="width: 20%; margin-left: 58%;margin-bottom: 2px;"(click)="setCommission(commission,training.id)" ><span class="glyphicon glyphicon-ok"></span> Change Commision</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <button type="button" class="btn btn-danger"  style="width: 20%; margin-left: 58%;"(click)="toggle()" ><span class="glyphicon glyphicon-remove"></span> Cancel</button></div>
+
+</div>
+      </div>
+</div>
+<br> </body>
+</html>

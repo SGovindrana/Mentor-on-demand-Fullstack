@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>training</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style type="text/css">
+    body{
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100vh;
+    }
+    table{
+      font-size: 10px;
+      color: white;
+    }
+    .container{
+      color: white;
+    }
+    td{
+      color: white;
+    }
+    h1{
+      color: black;
+    }
+    h3{
+      color: black;
+    }
+    h2{
+      color: white;
+    }
+    #k{
+     color: darkslategray;
+    }
+    #l{
+      color:darkslategray;
+    }
+    #x{
+      font-family: "Comic Sans MS";
+     
+
+    }
+  </style>
+</head>
+<body background="/assets/b.jpg">
+  <h2 id="x" align="center"> Training Details</h2><br>
+<!-- <div class="container">
+    <div id="m"class="col-md-3"><input id="l" type="date"  [(ngModel)]="startDate" name="startDate" placeholder="Start Date"></div>
+    <div id="m" class="col-md-3"><input id="l" type="date"  [(ngModel)]="endDate" name="endDate" placeholder="End Date"></div>
+
+  <div class="col-md-3"><button (click)='search(startDate,endDate)' id="k" type="Submit">Submit</button></div>
+ </div>-->
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+ 
+<div id="x" class="col-md-6">
+ 
+  
+  
+  
+  <table class="table ">
+    <thead>
+    <tr>
+      <th >Id</th>
+     <th>progress</th>
+      <th>commissionAmount</th>
+      <th>rating</th>
+
+      <th>startDate</th>
+      <th>endDate</th>
+      <th>startTime</th>
+      <th>endTime</th>
+      <th>amountReceived</th>
+      <th>mentorId</th>
+     <th>AmountToMentor</th>
+      <!-- <th>userId</th>
+    
+   <th>skillId</th>-->
+  
+   <th>fees</th>
+   <th>status</th>
+   <th>Created At</th>
+    <th>Updated At</th>
+   <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let training of training">
+      <td >{{training.id}}</td>
+      <td>{{training.progress}}</td>
+      <td>{{training.commissionAmount}}</td>
+      <td>{{training.rating}}</td>
+      <td>{{training.startDate}}</td>
+      <td>{{training.endDate}}</td>
+      <td>{{training.startTime}}</td>
+      <td>{{training.endTime}}</td>
+      <td>{{training.amountReceived}}</td>
+      <td>{{training.mentor.id}}</td>
+      <td>{{training.amountToMentor}}</td>
+      <!--<td>{{training.userId}}</td>
+      <td>{{training.skillId}}</td> -->
+      <td>{{training.fees}}</td>
+      <td>{{training.status}}</td>
+      <td>{{training.createdAt | date}}</td>
+      <td>{{training.updatedAt | date}}</td>
+      <td><button class="btn btn-danger" (click)="deleteTraining(training)"> Delete Training</button></td>
+    </tr>
+    </tbody>
+  </table>
+  </div>

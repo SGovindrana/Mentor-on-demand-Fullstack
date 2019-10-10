@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <style>
+    #login{
+      width: 500px;
+      border-radius: 5px;
+      background-color: #92a8d1;
+      opacity: 0.8;
+      padding: 50px; 
+      color: white;
+    }
+    body{
+     background-image: url("/assets/b.jpg");
+
+    }
+    </style>
+  </head>
+<body>
+<div id="login" class="container text-center">
+  <h2 class="container text-center">Add Payment</h2>
+<form>
+
+  <div class="form-group">
+      <label for="txnType">txnType:</label>
+      <input [(ngModel)]="payment.txnType" placeholder="txnType" name="txnType" class="form-control" id="txnType">
+    </div>
+
+    <div class="form-group">
+        <label for="amount">amount:</label>
+        <input [(ngModel)]="payment.amount" placeholder="amount" name="amount" class="form-control" id="amount">
+      </div>
+
+  <div class="form-group">
+    <label for="rating">remarks:</label>
+    <input [(ngModel)]="payment.remarks" placeholder="remarks" name="remarks" class="form-control" id="remarks">
+  </div>
+
+  
+
+  <div class="form-group">
+      <label for="mentorId">mentorId</label>
+      <input type="mentorId" [(ngModel)]="payment.mentorId" placeholder="mentorId" name="mentorId" class="form-control" id="mentorId">
+    </div>
+
+  <div class="form-group">
+      <label for="trainingId">trainingId</label>
+      <input type="trainingId" [(ngModel)]="payment.trainingId" placeholder="trainingId" name="trainingId" class="form-control" id="trainingId">
+    </div>
+   
+    <div class="form-group">
+        <label for="paymentType">paymentType:</label>
+        <input type="paymentType" [(ngModel)]="payment.paymentType" placeholder="paymentType" name="paymentType" class="form-control" id="startTime">
+      </div>
+      <div class="form-group">
+        <label for="createdAt">Created Date:</label>
+        <input type ="datetime" [(ngModel)]="payment.createdAt" placeholder="createdAt" name="createdAt" class="form-control" id="createdAt">
+      </div>
+    
+      <div class="form-group">
+        <label for="updatedAt">Updated Date</label>
+        <input  type="datetime" [(ngModel)]="payment.updatedAt" placeholder="updatedDate" name="updatedAt" class="form-control" id="updatedAt">
+      </div>
+      
+  <button class="btn btn-success" (click)="createPayment()">Create</button>
+</form>
+</div>

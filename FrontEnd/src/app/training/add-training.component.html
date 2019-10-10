@@ -1,0 +1,107 @@
+<html>
+  <head>
+    <style>
+    #login{
+      width: 500px;
+      border-radius: 5px;
+  background-color: #92a8d1;
+  opacity: 0.8;
+  padding: 50px;
+      
+    }
+    body{
+      background-image: url("/assets/b.jpg");
+    }
+    </style>
+  </head>
+
+  <body>
+<div id="login" class="container text-center">
+
+
+  <h2 class="text-center" >Add Training</h2>
+  <br>
+<form >
+ <div class="form-group">
+      <label for="progress">progress:</label>
+      <input [(ngModel)]="training.progress" placeholder="progress(25%,50%,75%,100%)" name="progress" class="form-control" id="progress">
+    </div>
+
+    <div class="form-group">
+        <label for="commissionAmount">commissionAmount:</label>
+        <input [(ngModel)]="training.commissionAmount" placeholder="commissionAmount" name="commissionAmount" class="form-control" id="commissionAmount">
+      </div>
+
+  <div class="form-group">
+    <label for="rating">Rating:</label>
+    <input [(ngModel)]="training.rating" placeholder="rating" name="rating" class="form-control" id="rating">
+  </div>
+
+  
+
+  <div class="form-group">
+      <label for="startDate">start Date:</label>
+      <input type="date" [(ngModel)]="training.startDate" placeholder="startDate" name="startDate" class="form-control" id="startDate">
+    </div>
+
+  <div class="form-group">
+      <label for="endDate">endDate:</label>
+      <input type="date" [(ngModel)]="training.endDate" placeholder="endDate" name="endDate" class="form-control" id="endDate">
+    </div>
+   
+    <div class="form-group">
+        <label for="startTime">startTime:</label>
+        <input type="datetime" [(ngModel)]="training.startTime" placeholder="startTime" name="startTime" class="form-control" id="startTime">
+      </div>
+
+      <div class="form-group">
+          <label for="endTime">endTime:</label>
+          <input type="datetime" [(ngModel)]="training.endTime" placeholder="endTime" name="endTime" class="form-control" id="endTime">
+        </div>
+        <div class="form-group">
+            <label for="amountReceived">amountReceived:</label>
+            <input type="number" [(ngModel)]="training.amountReceived" placeholder="amountReceived" name="amountReceived" class="form-control" id="amountReceived">
+          </div> 
+          <div class="form-group">
+              <label for="mentorId">mentorId:</label>
+              <input type="number" [(ngModel)]="training.mentorId" placeholder="mentorId" name="mentorId" class="form-control" id="mentorId">
+            </div>
+            <div class="form-group">
+                <label for="amountToMentor">amountToMentor:</label>
+                <input type="number" [(ngModel)]="training.amountToMentor" placeholder="amountToMentor" name="amountToMentor" class="form-control" id="amountToMentor">
+              </div>
+
+              <div class="form-group">
+                  <label for="userId">userId:</label>
+                  <input type="number" [(ngModel)]="training.userId" placeholder="userId" name="userId" class="form-control" id="userId">
+                </div> 
+                
+                  <div class="form-group">
+                      <label for="skillId">skillId:</label>
+                      <input type="number" [(ngModel)]="training.skillId" placeholder="skillId" name="skillId" class="form-control" id="skillId">
+                    </div>
+                   
+                    <div class="form-group">
+                      <label for="fees">fees:</label>
+                      <input type="number" [(ngModel)]="training.fees" placeholder="fees" name="fees" class="form-control" id="fees">
+                    </div>
+                    <div class="form-group">
+                      <label for="status">status:</label>
+                      <input type="string" [(ngModel)]="training.status" placeholder="status" name="status" class="form-control" id="status">
+                    </div>
+                    <div class="form-group">
+                      <label for="createdAt">Created Date:</label>
+                      <input type ="datetime" [(ngModel)]="training.createdAt" placeholder="createdAt" name="createdAt" class="form-control" id="createdAt">
+                    </div>
+                  
+                    <div class="form-group">
+                      <label for="updatedAt">Updated Date</label>
+                      <input  type="datetime" [(ngModel)]="training.updatedAt" placeholder="updatedDate" name="updatedAt" class="form-control" id="updatedAt">
+                    </div>
+
+
+  <button class="btn btn-success" (click)="createTraining()">Create</button>
+</form>
+</div>
+</body>
+</html>

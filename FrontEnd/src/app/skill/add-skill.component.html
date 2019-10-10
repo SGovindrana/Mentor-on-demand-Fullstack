@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <style>
+    #login{
+      width: 500px;
+      border-radius: 5px;
+      background-color: #92a8d1;
+      opacity: 0.8;
+      padding: 50px; 
+    }
+    body{
+      background-image: url("/assets/b.jpg");
+
+    }
+    
+    </style>
+  </head>
+
+  <body>
+<div id="login" class="container text-center">
+<h2 class="text-center">Add Skill</h2>
+<form>
+  <div class="form-group">
+    <label for="ename">Name:</label>
+    <input type="text" [(ngModel)]="skill.name" placeholder="Name" name="name" class="form-control" id="name">
+  </div>
+
+  <div class="form-group">
+    <label for="toc">Toc:</label>
+    <input [(ngModel)]="skill.toc" placeholder="Toc" name="toc" class="form-control" id="toc">
+  </div>
+
+  <div class="form-group">
+    <label for="prerequisite">Prerequisite:</label>
+    <input [(ngModel)]="skill.prerequisites" placeholder="Prerequisite" name="prerequisite" class="form-control" id="prerequisite">
+  </div>
+  <div class="form-group">
+    <label for="createdAt">Created Date:</label>
+    <input type ="datetime" [(ngModel)]="skill.createdAt" placeholder="createdAt" name="createdAt" class="form-control" id="createdAt">
+  </div>
+
+  <div class="form-group">
+    <label for="updatedAt">Updated Date</label>
+    <input  type="datetime" [(ngModel)]="skill.updatedAt" placeholder="updatedDate" name="updatedAt" class="form-control" id="updatedAt">
+  </div>
+
+ 
+
+  <button class="btn btn-success" (click)="createSkill()">Create</button>
+  <br>
+  
+</form>
+</div>
+</body>
+</html>

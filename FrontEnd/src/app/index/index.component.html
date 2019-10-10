@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Index Page For User</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style type="text/css">
+    body{
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image:url("https://i.pinimg.com/originals/f0/df/fd/f0dffdcf873936786b4ee8b518521a5a.jpg")
+    }
+    .container{
+      color: white;
+      }
+    h1{
+      color: white
+    }
+    h3{
+      color: white;
+
+    }
+    #v
+    {
+      font-family: "Comic Sans MS";
+
+    }
+    .r{
+      font-family: "Comic Sans MS";
+     
+    }
+    #r{
+      font-family: "Comic Sans MS";
+     
+    }
+    #a{
+      color: white;
+    }
+    
+    h2{
+      font-family: "Comic Sans MS";
+      color: white;
+    }
+    #abc {
+   padding: 10px;
+  border: 5px solid gray;
+}
+#xyz{
+   padding: 10px;
+  border: 5px solid gray;
+}
+}
+.col-sm-3{
+   padding: 10px;
+  border: 5px solid gray;
+
+}
+
+
+  
+
+
+</style>
+</head>
+<body>
+
+<div>
+  <nav id="r" class="navbar ">
+    <div class="container-fluid">
+    <div  class="navbar-header">
+
+
+      <a routerLink="/index"   class="navbar-brand" href="#">Home</a>
+      <a routerLink="/current"    class="navbar-brand" href="#">Curent Training</a>
+      <a routerLink="/training1"   class="navbar-brand" href="#">Completed Training</a>
+      <a routerLink="/profile"    class="navbar-brand" href="#">Employee Profile</a>
+     <a routerLink="/addpayment"    class="navbar-brand" href="#">Add Payment</a>
+     \ <a routerLink="/userpayment"    class="navbar-brand" href="#">Payment Detail</a>
+      
+      <form class="navbar-form navbar-right" action="">
+        <div class="input-group">
+         
+          <div class="input-group-btn">
+           
+          </div>
+        </div>
+      </form>
+    </div>
+    
+    <ul class="nav navbar-nav navbar-right">
+      <li><a id ="a" (click)="logout()"><span class="glyphicon glyphicon-log-out" ></span>Logout</a></li>
+    </ul>
+  </div>
+</nav>
+</div>
+<div class="container">
+  <h2 align ="center" >Welcome</h2>
+    <h2 id="v" align ="center" ></h2>
+    <hr><br><br><br>
+  <div id="r" class="row">
+    <div class="col-sm-4" id="abc">
+     <h3 style="font-family: Comic sans MS">ANGULAR</h3> 
+     <br>
+      <p style="color: darkslategray">There are five major releases of Angular. The first version that was released is Angular 1, which is also called AngularJS. Angular 1 was followed by Angular 2, which came in with a lot of changes when compared to Angular 1..</p>
+      <p style="color:darkslategray">Angular 5 was released in Nov 2017. As per its goal of speed and size, It was way faster and of smaller size than that of Angular 4. Following are the features that were introduced in Angular 5.
+
+        HTTPClient API − HTTPClient API was introduced to deprecate the HTTP library. HTTPClient API is much faster, secure and efficient than HTTP library.
+        
+        Multiple export aliases − A component can be exported using multiple aliases to ease the migration process.
+        
+        Internationalized Pipes for Number, Date, and Currency − New pipes are introduced for better standardization.
+        
+        Lambda support − lambda expressions with proper names can be used instead of functions.
+        
+        Build Optimizer - Build Optimizer introduced. It optimizes the build size and improves the application speed. Angular CLI uses Build Optimizer automatically.
+        
+        Improved Compiler − Compiler from Angular 5 onwards supports incremental compilation leading for faster compilation. Compiler uses TypeScript transforms, a new feature of TypeScript 2.3 available onwards.</p>
+    </div>
+    <div id="xyz" class="col-sm-4">  
+      <h3 style="font-family: Comic sans MS">MYSQL</h3>
+      <br>
+      <p style="color:darkslategray;">MySQL is the most popular Open Source Relational SQL Database Management System. MySQL is one of the best RDBMS being used for developing various web-based software applications. MySQL is developed, marketed and supported by MySQL AB, which is a Swedish company. This tutorial will give you a quick start to MySQL and make you comfortable with MySQL programming</p>
+      <p style="color:darkslategray;">Installing MySQL on Windows
+        The default installation on any version of Windows is now much easier than it used to be, as MySQL now comes neatly packaged with an installer. Simply download the installer package, unzip it anywhere and run the setup.exe file.
+        The default installer setup.exe will walk you through the trivial process and by default will install everything under C:\mysql.
+        Test the server by firing it up from the command prompt the first time. Go to the location of the mysqld server which is probably C:\mysql\bin, and type −
+        mysqld.exe --console the server by firing it up from the command prompt the first time.
+        
+        NOTE − If you are on NT, then you will have to use mysqld-nt.exe instead of mysqld.exe
+        
+       </p>
+    </div>
+    <div  id="abc" class="col-sm-4">
+      <h3 style="font-family: Comic sans MS">JAVASCRIPT</h3>       
+      <br> 
+      <p style="color:darkslategray;">JavaScript is a lightweight, interpreted programming language. It is designed for creating network-centric applications. It is complimentary to and integrated with Java. JavaScript is very easy to implement because it is integrated with HTML. It is open and cross-platform.</p>
+      <p style="color:darkslategray;">What is JavaScript ?
+        JavaScript is a dynamic computer programming language. It is lightweight and most commonly used as a part of web pages, whose implementations allow client-side script to interact with the user and make dynamic pages. It is an interpreted programming language with object-oriented capabilities.
+        
+        JavaScript was first known as LiveScript, but Netscape changed its name to JavaScript, possibly because of the excitement being generated by Java. JavaScript made its first appearance in Netscape 2.0 in 1995 with the name LiveScript. The general-purpose core of the language has been embedded in Netscape, Internet Explorer, and other web browsers.
+        
+        The ECMA-262 Specification defined a standard version of the core JavaScript language.
+        
+        JavaScript is a lightweight, interpreted programming language.
+        Designed for creating network-centric applications.
+        Complementary to and integrated with Java.
+        Complementary to and integrated with HTML.
+        Open and cross-platform.</p>
+       
+    </div>
+  </div>
+</div>
+
+
+<br><br><br><br><br>
+
+
+</body>
+</html>

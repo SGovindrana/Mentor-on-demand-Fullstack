@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+  <title>Mentor</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
+
+  <style>
+    body{
+      background-image: url("https://i.pinimg.com/originals/f0/df/fd/f0dffdcf873936786b4ee8b518521a5a.jpg") ;
+      min-height:350px;
+      background-attachment: fixed ;
+      background-repeat: no-repeat ;
+      background-size: cover; 
+      
+    }
+    h2{
+      color: white;
+      font-family: "Comic Sans MS";
+    }
+    label{
+      color:white;
+      font-family: "Comic Sans MS";
+    }
+    #abc{
+    
+      border-radius: 5px;
+  
+      opacity: 0.8;
+      padding: 50px;
+      width:500px;
+    }
+    
+  </style>
+</head>
+<body>
+<div id="abc" class="container text-center" >
+    <img src="/assets/c.png"  style="width:150px;height:150px;">
+
+<h2 >Login for Mentor</h2>
+<h2 align="right"><a id="a" routerLink="/home">Back</a></h2>
+<form >
+<div class="form-group">
+<label for="userName">Username :</label>
+<input type="userName" [(ngModel)]="mentor1.userName" class="form-control" id="userName" placeholder="Enter userName" name="userName"   maxlength="200" size="2" ></div>
+<div class="form-group">
+<label for="password">Password:</label>
+<input type="password" [(ngModel)]="mentor1.password" class="form-control" id="password" placeholder="Enter password" name="password">
+</div>
+<div class="checkbox" >
+<label><input type="checkbox" name="remember"> Remember me</label>
+<div><button type="button" class="btn btn-link"><a routerLink ="/uindex"></a></button> </div>
+<button type="submit" class="btn btn-success"  (click)="authenticate(mentor1.userName,mentor1.password)">Log in</button>
+<div><button type="button" class="btn btn-link"><a routerLink="/mentorsignup">New User?Sign up</a></button> </div>
+<div>

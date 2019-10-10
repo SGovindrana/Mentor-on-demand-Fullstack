@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+  <title>Admin </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
+
+  <style>
+    body{
+      background-image: url("https://i.pinimg.com/originals/f0/df/fd/f0dffdcf873936786b4ee8b518521a5a.jpg") ;
+
+      background-attachment: fixed ;
+      background-repeat: no-repeat ;
+      background-size: cover; 
+
+      
+    }
+    h2{
+      color: white;
+      font-family: "Comic Sans MS";
+    }
+    label{
+      color:white;
+      font-family: "Comic Sans MS";
+    }
+    a{
+      font-family: "Comic Sans MS";
+    }
+    #rana{
+      border-radius: 5px;
+   
+      opacity: 0.8;
+      padding: 50px;
+      width:500px;
+    }
+   
+  </style>
+</head>
+<body>
+<div id="rana" class="container text-center" >
+  <img src="/assets/c.png" style="width:150px;height:150px;">
+  
+<h2 >Welcome Admin</h2>
+<h3 align="right"><a id="a" routerLink="/home">Back</a></h3>
+
+<form >
+<div class="form-group">
+<label for="email">Username:</label>
+<input type="text" class="form-control" id="usr" (input)='usr=$event.target.value' placeholder="Enter username" name="usr"   maxlength="20"  ></div>
+<div class="form-group">
+<label for="pwd">Password:</label>
+<input type="password" class="form-control" id="pwd" (input)='pwd=$event.target.value' placeholder="Enter password" name="pwd"  >
+</div>
+<div class="checkbox" >
+<label><input type="checkbox" name="remember"> Remember me</label>
+<br><br>
+<button type="submit" on-click='validate()' class="btn btn-success">Log in</button>
+
+<div>
+<br>
+<br>
+<br>
+
